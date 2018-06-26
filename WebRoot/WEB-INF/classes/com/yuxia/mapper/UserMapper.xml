@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yuxia.mapper.UserMapper">
+	<!-- 在mybatis-config中配置typeAliases,可以简写,首字母可以大写也可以小写 -->
+	<!-- <select id="selectUser" resultType="com.yuxia.entity.User"> -->
+	<select id="selectUser" resultType="user">
+		select * from user_info where id = #{id}
+	</select>
+	<select id="selectAll" resultType="user">
+		select * from user_info
+	</select>
+</mapper>
